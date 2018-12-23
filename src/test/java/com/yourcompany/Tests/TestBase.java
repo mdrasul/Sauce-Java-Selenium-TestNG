@@ -28,9 +28,9 @@ public class TestBase  {
 
     public String buildTag = System.getenv("BUILD_TAG");
 
-    public String username = System.getenv("SAUCE_USERNAME");
+    public String username = "MDRasul";
 
-    public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+    public String accesskey = "1df585b2-88bc-4578-8a98-c920e9eaf383";
 
     /**
      * ThreadLocal variable which contains the  {@link WebDriver} instance which is used to perform browser interactions with.
@@ -102,9 +102,7 @@ public class TestBase  {
         }
 
         // Launch remote browser and set it as the current thread
-        webDriver.set(new RemoteWebDriver(
-                new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),
-                capabilities));
+        webDriver.set(new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + "@ondemand.saucelabs.com:443/wd/hub"),capabilities));
 
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
