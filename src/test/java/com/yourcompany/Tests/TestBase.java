@@ -28,9 +28,9 @@ public class TestBase  {
 
     public String buildTag = System.getenv("BUILD_TAG");
 
-    public String username = "MDRasul";
+    public String username = "msgtesting";
 
-    public String accesskey = "1df585b2-88bc-4578-8a98-c920e9eaf383";
+    public String accesskey = "9efcf806-4026-4cf1-9d99-75b62178b6a8";
 
     /**
      * ThreadLocal variable which contains the  {@link WebDriver} instance which is used to perform browser interactions with.
@@ -89,6 +89,7 @@ public class TestBase  {
      */
     protected void createDriver(String browser, String version, String os, String methodName)
             throws MalformedURLException, UnexpectedException {
+    	
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         // set desired capabilities to launch appropriate browser on Sauce
@@ -97,6 +98,10 @@ public class TestBase  {
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
 
+        System.out.println("Sauce User Nmae Used : " + username);
+        System.out.println("Sauce Access KEY  : " + accesskey);
+
+        
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
         }
