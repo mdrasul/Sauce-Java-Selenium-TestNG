@@ -28,10 +28,17 @@ public class TestBase  {
 
     public String buildTag = System.getenv("BUILD_TAG");
 
-    public String username = "msgtesting";
+    //sauceLabUsername=MDRasul
+    	//sauceLabAccessKey=1df585b2-88bc-4578-8a98-c920e9eaf383
+    
+    //public String username = "msgtesting";
+    //public String accesskey = "9efcf806-4026-4cf1-9d99-75b62178b6a8";
 
-    public String accesskey = "9efcf806-4026-4cf1-9d99-75b62178b6a8";
+    public String username = "MDRasul";
+    public String accesskey = "1df585b2-88bc-4578-8a98-c920e9eaf383";
 
+    
+    
     /**
      * ThreadLocal variable which contains the  {@link WebDriver} instance which is used to perform browser interactions with.
      */
