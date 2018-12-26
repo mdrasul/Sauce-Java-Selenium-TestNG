@@ -34,9 +34,11 @@ public class TestBase  {
     //public String username = "msgtesting";
     //public String accesskey = "9efcf806-4026-4cf1-9d99-75b62178b6a8";
 
-    public String username = "MDRasul";
-    public String accesskey = "1df585b2-88bc-4578-8a98-c920e9eaf383";
+    public String username = "jenkinscimsg";
+    public String accesskey = "76d8f272-7211-4054-8be1-bb972043d4eb";
 
+    		//sauceLabUsername=jenkinscimsg
+    		//sauceLabAccessKey=76d8f272-7211-4054-8be1-bb972043d4eb
     
     
     /**
