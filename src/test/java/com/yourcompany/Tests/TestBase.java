@@ -132,6 +132,8 @@ public class TestBase  {
     public void tearDown(ITestResult result) throws Exception {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         webDriver.get().quit();
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",getSessionId(),"MSG Sales Center  Regression Test");
+		System.out.println("Jenkins Build status Update Parameters: " + message);
     }
 
     protected void annotate(String text) {
