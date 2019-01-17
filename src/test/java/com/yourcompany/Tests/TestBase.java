@@ -34,8 +34,8 @@ public class TestBase  {
     //public String username = "msgtesting";
     //public String accesskey = "9efcf806-4026-4cf1-9d99-75b62178b6a8";
 
-    public String username = "jenkinscimsg";
-    public String accesskey = "76d8f272-7211-4054-8be1-bb972043d4eb";
+    public String username = "MDRasul";
+    public String accesskey = "1df585b2-88bc-4578-8a98-c920e9eaf383";
 
     		//sauceLabUsername=jenkinscimsg
     		//sauceLabAccessKey=76d8f272-7211-4054-8be1-bb972043d4eb
@@ -96,8 +96,7 @@ public class TestBase  {
      * @return
      * @throws MalformedURLException if an error occurs parsing the url
      */
-    protected void createDriver(String browser, String version, String os, String methodName)
-            throws MalformedURLException, UnexpectedException {
+    protected void createDriver(String browser, String version, String os, String methodName)throws MalformedURLException, UnexpectedException {
     	
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -132,6 +131,7 @@ public class TestBase  {
     public void tearDown(ITestResult result) throws Exception {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:job-result=" + (result.isSuccess() ? "passed" : "failed"));
         webDriver.get().quit();
+        
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",getSessionId(),"MSG Sales Center  Regression Test");
 		System.out.println("Jenkins Build status Update Parameters: " + message);
     }
